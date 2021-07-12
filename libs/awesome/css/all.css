@@ -1500,7 +1500,7 @@ readers do not read off random characters that represent icons */
 .fa-fan:before {
   content: "\f863"; }
 
-.fa-fantasy-flight-games:before {
+.fa-fantasy-flight-game:before {
   content: "\f6dc"; }
 
 .fa-fast-backward:before {
