@@ -398,7 +398,7 @@
       background-size: cover;
       transition: all 0.25s ease;
     }
-/*下面这些css都可以删掉，是原博主有关风格的配置*/
+  /*下面这些css都可以删掉，是原博主有关风格的配置*/
     element.style {
       font-size: 18px;
       }
@@ -420,15 +420,13 @@
     border-radius: 3px;
     font-size: var(--content-font-size);
 }
-
-
 html {
     line-height: 1.5;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     font-weight: normal;
     color: rgba(0,0,0,0.87);
 }
-  </style>
+</style>
 
 <main class="content">
     <div class="container chip-container">
@@ -528,6 +526,8 @@ html {
             }
           </script>
   
+
+   
   <script>
     function enterfullscreen() {
       //进入全屏
@@ -574,6 +574,22 @@ html {
       b ? enterfullscreen() : exitfullscreen()
     })
   </script>
+  <script>
+    if (localStorage.getItem('themespring') === '1') {
+      document.body.classList.add('themespring')
+    } else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
+      document.body.classList.add('themespring')
+    }
+  </script>
+
+  <script>
+    if (localStorage.getItem('themechris') === '1') {
+      document.body.classList.add('themechris')
+    } else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+      document.body.classList.add('themechris')
+    }
+  </script>
+
 
     <footer class="page-footer bg-color">
     
