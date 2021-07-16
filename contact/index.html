@@ -370,8 +370,182 @@
 
     </div>
 </div>
+<style>
+ 
+.swbk p {
+    line-height: 2.02rem;
+    padding: 2px 10px;
+}
+.bozhushuo {
+    font-size: 19px !important;
+    margin: 0 0 12px !important;
+    line-height: 1.9rem;
+    font-family: 'Linux Biolinum', 'Noto Serif SC', Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+}
+
+.swbk p {
+    font-size: 19px !important;
+    line-height: 2rem;
+    text-indent: 2rem;
+    font-style: italic;
+}
+.poem-wrap {
+    position: relative;
+    width: 730px;
+    max-width: 80%;
+    border: 2px solid #797979;
+    border-top: 0;
+    text-align: center;
+    margin: 80px auto;
+}
+.poem-wrap p:nth-of-type(1) {
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto;
+}
+.poem-wrap p {
+    width: 70%;
+    margin: auto;
+    line-height: 30px;
+    color: #797979;
+}
+.poem-wrap p:nth-of-type(2) {
+    font-size: 18px;
+    margin: 15px auto;
+}
+element.style {
+    color: rgb(178, 143, 206);
+}
+
+.swbk .label {
+    left: -18px;
+}
+.swbk .label {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 0 14px 0 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 0 3px 3px 0;
+    background-color: currentColor;
+}
+.swbk .label:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0 16px 16px 0;
+    border-color: transparent;
+    border-right-color: currentColor;
+    -webkit-filter: brightness(120%);
+    filter: brightness(120%);
+}
+.swbk .label span {
+    color: #fff;
+}
+.swbk {
+    position: relative;
+    padding: 26px 20px;
+    font-style: italic;
+    margin: 10px 0px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 14px 38px rgb(0 0 0 / 8%), 0 3px 8px rgb(0 0 0 / 6%);
+    box-shadow: 0 14px 38px rgb(0 0 0 / 8%), 0 3px 8px rgb(0 0 0 / 6%);
+    -webkit-transition: all 0.3s ease 0s, -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    transition: all 0.3s ease 0s, -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    transition: all 0.3s ease 0s, transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    transition: all 0.3s ease 0s, transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+}
+.swbk {
+    padding: 26px 2px !important;
+    margin: 14px 0px !important;
+}
+
+  </style>
 
 <main class="content">
+    <main class="content">
+        <div id="contact" class="container chip-container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="tag-title center-align">
+                        <i class="fas fa-comments"></i>&nbsp;&nbsp;留言板                
+                    </div>
+                     <!-- 加入网易云音乐热门评论，实时更新 -->
+                    <div class="poem-wrap">
+                        <div class="poem-border poem-left">
+                        </div>
+                        <div class="poem-border poem-right">
+                        </div>
+                        <h1>热评</h1>
+                        <p id="poem">loading...</p>
+                        <p id="info">loading...</p>
+                    </div>
+                    <script>
+                        $.get("https://v1.hitokoto.cn?c=d&c=h&c=j",function(data,status){if(status=='success'){$('#poem').html(data.hitokoto);if(data.from_who!=null){$('#info').html(data.from_who+" · "+"《 "+data.from+" 》");}else{$('#info').html(" “ "+data.from+" ” ");}}else{$('#poem').html("获取出错啦");}});
+                    </script>
+                    
+                    <div class="swbk">
+                        <div class="label" style="color: rgb(178, 143, 206);">
+                            <span>欢迎</span>
+                        </div>
+                        <!--主题挂件 -->
+                        <div class="caishendengsd">        
+                            <div class="caishenxiansd">
+                            </div>              
+                        </div>
+                        <div class="caishendeng">        
+                            <div class="caishenxian">
+                            </div>              
+                        </div>
+                        <p class="bozhushuo">欢迎来到WAT</p>
+                        <p class="bozhushuo">这里是本站的讨论区，你可以在这里发表你的看法，留下你的社交网站地址便更好不过了。</p>
+                        <p class="bozhushuo">文章若有内容纰漏、图片加载失败、链接失效的地方, 可告知站长, 定会修改完善。</p>
+                    </div>
+                    <div class="swbk">
+                        <div class="label" style="color: rgb(127, 41, 197);">
+                            <span>发帖须知</span></div>
+                        <!--主题 挂件-->
+                        <div class="caishendengsd">        
+                            <div class="caishenxiansd">
+                            </div>              
+                        </div>
+                        <div class="caishendeng">        
+                            <div class="caishenxian">
+                            </div>              
+                        </div>
+                        <ul>
+                            <li><p class="bozhushuo">1、本站所有访客在不违反站规的情况下都有自由发帖、自由阅读其他人发表的主题的权利。</p></li>
+                            <li><p class="bozhushuo">2、禁止超长无意义回复、刷屏式水帖。</p></li>
+                            <li><p class="bozhushuo">3、禁止在本吧发布任何现金或帐号交易内容。</p></li>
+                            <li><p class="bozhushuo">4、禁止发表色情、暴力、政治敏感或其他法律法规禁止的言论。</p></li>
+                            <li><p class="bozhushuo">5、一旦发现违规者将立刻删帖并永久封禁该IP发帖。</p></li>
+                            <ul>
+                       
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+               
+    
+            <br></br>
+            <br></br>
+    
+
     <div id="contact" class="container chip-container">
         <div class="card">
             <div class="card-content">
